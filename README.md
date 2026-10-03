@@ -1,4 +1,4 @@
-# ColorOS 电池页面个性化（v2.7-auto）
+# ColorOS 电池页面个性化（v2.8-coloros17）
 
 > 全局“亮屏活动时长”会根据用户对应用的隐藏/改时配置自动重算，按当前 ColorOS 统计区间
 > 的原始应用前台时长计算显示层差值；不写入 BatteryStats，也不改息屏活动时长。
@@ -13,9 +13,17 @@
 两个模式相互独立。同一个应用同时勾选时，隐藏优先；取消任意一个模式不会影响另一个模式。
 首次启动只默认勾选并隐藏模块自身 `com.bule.color`，抖音、QQ、微信等不会被新增到任何模式。
 
+## ColorOS 17 适配
+
+- ColorOS 17（当前 PJD110 `17.0.0.106`）的排行列表入口改为
+  `SipperListPreference.b0(List)`，详情前台/后台显示入口改为
+  `PowerControlStatsPreference.J(String)` / `L(String)`。
+- 模块现在优先 Hook 这些新入口，同时保留旧版 `Y/I/E` 方法名回退，因此旧版和
+  ColorOS 17 共用一个 APK。
+
 ## 版本与作用域
 
-- 版本：`2.7-auto`（versionCode `10`）
+- 版本：`2.8-coloros17`（versionCode `11`）
 - 模块包：`com.bule.color`
 - 唯一宿主包：`com.oplus.battery`
 - 实际 Hook 进程：`com.oplus.battery:ui`
