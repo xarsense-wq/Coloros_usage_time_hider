@@ -1,4 +1,3 @@
-# Coloros_usage_time_hider
 # ColorOS 电池页面个性化（v2.7-auto）
 
 > 全局“亮屏活动时长”会根据用户对应用的隐藏/改时配置自动重算，按当前 ColorOS 统计区间
